@@ -3,7 +3,7 @@ name: Python
 on: workflow_dispatch
 
 jobs:
-  build:
+  build1:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -20,4 +20,12 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: python.txt
+          path: python1.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: python2.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: python3.txt
